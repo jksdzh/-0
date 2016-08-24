@@ -1,0 +1,8 @@
+target '城觅0'
+pod 'MJExtension'
+pod 'SDWebImage'
+pod 'Masonry'
+pod 'SDAutoLayout'
+pod 'MJRefresh'
+pod 'AMapSearch'
+pod 'AMap2DMap'

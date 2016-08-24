@@ -4,10 +4,11 @@
 //
 //  Created by 康帅 金 on 2016/8/16.
 //  Copyright © 2016年 康帅 金. All rights reserved.
-//
+// 城觅 .学习的<维尼的小熊>的源码.以及一些自认为不足的地方的优化.以及view手写代码.布局适配了,6 6P.
+// 8 /24号下午7点08基本全部完成.没有复制粘贴.部分大段的注释是粘贴的
 
 #import "AppDelegate.h"
-
+#import "CNMainViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +17,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    _window =[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    CNMainViewController *rootVC =[[CNMainViewController alloc]init];
+//    _window.backgroundColor =[UIColor whiteColor];
+    _window.rootViewController =rootVC;
+    [_window makeKeyAndVisible];
+
     return YES;
 }
 

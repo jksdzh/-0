@@ -1,0 +1,49 @@
+//
+//  PrefixHeader.pch
+//  城觅0
+//
+//  Created by 康帅 金 on 2016/8/16.
+//  Copyright © 2016年 康帅 金. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
+#import "UIBarButtonItem+CNBarButtonItem.h"
+#import "UIColor+CNColor.h"
+#import "SDAutoLayout.h"
+//全局的绿色主题
+#define CNColor(r, g , b) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:1]
+#define CNGolbalGreen CNColor (33, 197, 180)
+
+//抽屉顶部距离 底部一样
+#define CNScaleTopMargin 35
+
+//app的高度
+#define CNAppHeight ([UIScreen mainScreen].bounds.size.height)
+//app的宽度
+#define CNAppWidth ([UIScreen mainScreen].bounds.size.width)
+//抽屉拉出来右边剩余的比例
+#define  CNZoomScaleRight 0.14
+//推荐cell的高度
+#define CNRnmdCellHeight 210.0
+//推荐headView的高度
+#define CNRnmdHeadViewHeight 60.0
+//背景的灰色
+#define CNBackgroundGrayColor CNColor(51, 52, 53)
+//判断系统版本号是否为ios8以上
+#define iOS8 [[[UIDevice currentDevice]systemVersion]floatValue] >= 8.0
+
+#pragma clang diagnostic ignored "-W#warnings"
+
+#ifdef DEBUG
+#define CNLog(...) NSLog(__VA_ARGS__)
+#else
+
+#define CNLog(...)
+#endif
+
+#endif /* PrefixHeader_pch */
